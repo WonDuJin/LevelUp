@@ -22,13 +22,16 @@ monster.style.height = "100px"
 monster.style.backgroundColor = "red"
 
 
-
+//버튼을 클릭했을 시 이벤트 발생
 button.addEventListener("click",()=>{
   let count= 0
+  //일일히 클릭하는게 힘들어서 인터벌을 주었음
     setInterval(()=>{
     count ++
-    for (let i = 0; i < 100; i++){
-      console.log(count)      
+    //Lv이 100일때 
+    for (let i = 0; i <= 100; i++){
+      console.log(count)
+      // 조건문으로 10의 제곱근을 추가하여 경험치를 구현      
       if(count === 10**i){        
         alert("Lv"+(i+1))
       }      
